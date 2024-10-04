@@ -14,12 +14,17 @@ repositories {
 
 dependencies {
 
-    testImplementation(kotlin("test"))
-    testImplementation ("io.kotest:kotest-assertions-core-jvm:5.4.2")
-    testImplementation ("io.mockk:mockk:1.12.8")
+    implementation("io.ktor:ktor-server-core:2.3.12")
+    implementation("io.ktor:ktor-server-netty:2.3.12")
 
-    testImplementation("org.mockito:mockito-core:4.8.0")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    testImplementation(kotlin("test"))
+    testImplementation ("io.kotest:kotest-assertions-core-jvm:5.9.1")
+    testImplementation ("io.mockk:mockk:1.13.12")
+
+    testImplementation("org.mockito:mockito-core:5.14.1")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
+
+    runtimeOnly("io.arrow-kt:arrow-core:1.2.4") // https://arrow-kt.io/
 }
 
 tasks.test {
